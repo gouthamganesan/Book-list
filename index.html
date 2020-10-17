@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+    />
+    <style>
+      input[disabled],
+      input[disabled]:hover {
+        background-color: rgb(233, 233, 233) !important;
+        border-color: rgb(207, 207, 207) !important;
+        color: rgb(150, 150, 150) !important;
+      }
+    </style>
+    <title>Book list</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Book List</h1>
+      <hr />
+
+      <!-- Book input form -->
+      <form id="book-input">
+        <label for="book-name">Book Name</label>
+        <input
+          type="text"
+          name="book-name"
+          id="book-name"
+          class="u-full-width"
+        />
+        <div class="row">
+          <div class="six columns">
+            <label for="author-name">Author Name</label>
+            <input
+              type="text"
+              name="author-name"
+              id="author-name"
+              class="u-full-width"
+            />
+          </div>
+          <div class="six columns">
+            <label for="isbn">ISBN</label>
+            <input type="number" name="isbn" id="isbn" class="u-full-width" />
+          </div>
+        </div>
+        <div class="row">
+          <input
+            type="submit"
+            value="submit"
+            class="four columns u-full-width button-primary"
+            id="submit-button"
+            disabled
+          />
+          <div id="message" class="eight columns u-full-width">
+            <!-- <span>Please enter valid values!</span> -->
+          </div>
+        </div>
+      </form>
+
+      <!-- Book list output table -->
+      <table id="book-data" class="u-full-width">
+        <thead>
+          <th>Book Name</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th></th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="appes5.js"></script>
+  </body>
+</html>
