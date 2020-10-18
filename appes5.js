@@ -11,23 +11,31 @@ function UI() {}
 
 // Adding Book to UI
 UI.prototype.addBookToUI = function (book) {
-// Create a row element
+  // Create a row element
   const row = document.createElement("tr");
 
   row.innerHTML = `
   <td>${book.book}</td>
   <td>${book.author}</td>
   <td>${book.isbn}</td>
-  <td><a href="#" class="delete">X</a></td>`
+  <td><a href="#" class="delete">X</a></td>`;
 
   document.querySelector("#book-data > tbody").appendChild(row);
-}
+};
 
+// Clearing all the input fields
 UI.prototype.clearFields = function () {
   uiBookName.value = "";
   uiAuthorName.value = "";
   uiISBN.value = "";
-}
+};
+
+// Delete book entries
+UI.prototype.deleteBook = function (book) {
+  if (book.classList.contains("delete")) {
+    book.parentElement.parentElement.remove();
+  }
+};
 
 // UI Elements
 
@@ -74,8 +82,11 @@ uiForm.addEventListener("submit", function (event) {
   event.preventDefault();
 });
 
-document.getElementById("book-data").addEventListener("click", function (event) {
-  if (event.target.classList.contains("delete")) {
-    event.target.parentElement.parentElement.remove();
-  }
-})
+// Delete book entries
+document
+  .getElementById("book-data")
+  .addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete")) {
+      event.target.parentElement.parentElement.remove();
+    }
+  });
