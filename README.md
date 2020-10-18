@@ -11,10 +11,12 @@ This project is a part of Traversy Media's Udemy Course. I just completed the se
 3. Submit only if all the values are present
 4. Delete book entries
 5. ES5 way of doing things
+6. ES6 way of doing things
+7. Local Storage functionality (in ES6)
 
 ### Next up
 
-* ES6 way of doing things
+* Implement the local storage functionality in ES5
 
 ## Footnotes
 
